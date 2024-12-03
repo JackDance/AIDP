@@ -4,7 +4,7 @@
 rm -rf /AIDP/conf/service_conf.yaml
 while IFS= read -r line || [[ -n "$line" ]]; do
     # Use eval to interpret the variable with default values
-    eval "echo \"$line\"" >> /ragflow/conf/service_conf.yaml
+    eval "echo \"$line\"" >> /AIDP/conf/service_conf.yaml
 done < /AIDP/conf/service_conf.yaml.template
 
 # unset http proxy which maybe set by docker daemon
